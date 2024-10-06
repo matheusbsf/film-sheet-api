@@ -14,13 +14,20 @@ public class FilmService {
     @Value("${access.token}")
     private String accessToken;
     private final WebClient webClient;
-    private String currentLanguage = "en-US";
+    // Idioma das informações recolhidas da API da TMDB
+    private String currentLanguage = "pt-BR";
 
     public FilmService(WebClient.Builder webClientBuilder) {
         this.webClient = webClientBuilder.baseUrl("https://api.themoviedb.org/3").build();
     }
 
-    // Retorna lista com detalhes de filmes que possuem as palavras-chave inseridas
+    /**
+     * GET REQUEST:
+     * Retorna lista com detalhes dos filmes que possuem as palavras-chave inseridas
+     * 
+     * @param input Palavras-chave separadas por vírgula (,)
+     * @return A lista de resultados da busca
+     */
     public List<FilmResponse> searchFilm(String input) {
         return webClient.get()
                 .uri("/search/movie?include_adult=true&language=" + currentLanguage + "&query=" + input)
@@ -28,22 +35,35 @@ public class FilmService {
                 .retrieve().bodyToFlux(FilmResponse.class).collectList().block();
     }
 
-    // Retorna detalhes do filme com o ID (int) do TMDB passado
+    /**
+     * GET REQUEST:
+     * Busca o ID informado no banco de dados da The Movie Database e retorna os
+     * detalhes do filme encontrado
+     * 
+     * @param id ID (Integer) do filme a ser consultado
+     * @return Os detalhes do filme mapeados de acordo com a entity Film
+     */
     public Film getFilmById(Integer id) {
         return webClient.get().uri("/movie/" + id)
                 .header("Authorization", "Bearer " + accessToken)
                 .retrieve().bodyToMono(Film.class).block();
     }
 
-    // Recebe uma lista de IDs (int) de filmes e retorna uma lista com os detalhes
-    public List<Film> getFilmList(List<Integer> list) {
+    /**
+     * MISC:
+     * Recebe uma lista de IDs (Integer) de filmes e retorna uma lista com os filmes
+     * detalhados
+     * 
+     * @param list Lista de números inteiros com IDs de filmes de acordo com a TMDB
+     * @return A lista com objetos mapeados de acordo com a entity Film
+     */
+    public List<Film> getFilmListDetails(List<Integer> list) {
         List<Film> tempList = new ArrayList<>();
         for (Integer id : list) {
             tempList.add(webClient.get().uri("/movie/" + id + "?language=" + currentLanguage)
                     .header("Authorization", "Bearer " + accessToken)
                     .retrieve().bodyToMono(Film.class).block());
         }
-
         return tempList;
     }
 
