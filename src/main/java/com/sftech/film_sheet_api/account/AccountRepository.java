@@ -1,4 +1,4 @@
-package com.sftech.film_sheet.account;
+package com.sftech.film_sheet_api.account;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

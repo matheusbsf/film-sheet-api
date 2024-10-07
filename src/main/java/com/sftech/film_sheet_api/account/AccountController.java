@@ -1,9 +1,9 @@
-package com.sftech.film_sheet.account;
+package com.sftech.film_sheet_api.account;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.sftech.film_sheet.film.Film;
+import com.sftech.film_sheet_api.film.Film;
 
 import java.util.List;
 import java.util.Optional;

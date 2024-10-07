@@ -1,4 +1,4 @@
-package com.sftech.film_sheet.film;
+package com.sftech.film_sheet_api.film;
 
 import lombok.Getter;
 import lombok.Setter;

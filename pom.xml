@@ -11,7 +11,7 @@
 		<relativePath></relativePath> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.sftech</groupId>
-	<artifactId>film-sheet</artifactId>
+	<artifactId>film-sheet-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Film Sheet</name>
 	<description>Web application for making movie lists</description>

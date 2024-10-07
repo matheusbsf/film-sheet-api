@@ -1,4 +1,4 @@
-package com.sftech.film_sheet.account;
+package com.sftech.film_sheet_api.account;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,8 +7,8 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
-import com.sftech.film_sheet.film.Film;
-import com.sftech.film_sheet.film.FilmService;
+import com.sftech.film_sheet_api.film.Film;
+import com.sftech.film_sheet_api.film.FilmService;
 
 @Service
 public class AccountService {
