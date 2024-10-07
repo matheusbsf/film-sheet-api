@@ -13,7 +13,7 @@
 	<groupId>com.sftech</groupId>
 	<artifactId>film-sheet-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Film Sheet</name>
+	<name>Film Sheet API</name>
 	<description>Web application for making movie lists</description>
 	<url></url>
 	<licenses>
