@@ -14,7 +14,7 @@
 	<artifactId>film-sheet-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Film Sheet API</name>
-	<description>Web application for making movie lists</description>
+	<description>RESTful API for a movie web application</description>
 	<url></url>
 	<licenses>
 		<license></license>
