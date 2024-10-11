@@ -139,6 +139,24 @@ public class AccountService {
     }
 
     /**
+     * DELETE REQUEST:
+     * Apaga a conta do usuário informado se a senha informada for correta
+     * 
+     * @param login O login da conta desejada
+     * @param senha A senha da conta informada
+     */
+    public int deleteAccount(String login, String senha) {
+        Account user = accountRepository.findById(login).orElseThrow(() -> new RuntimeException("Usuário não existe"));
+        if (senha == user.getSenha()) {
+            accountRepository.delete(user);
+            return 0;
+        } else {
+            return 1;
+        }
+
+    }
+
+    /**
      * MISC:
      * Encontra o valor dentro do listasMap com o nome(Key) passado e retorna uma
      * nova lista formatada de números inteiros para que possa ser utilizada em

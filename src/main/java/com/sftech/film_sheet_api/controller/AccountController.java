@@ -13,6 +13,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -75,5 +76,14 @@ public class AccountController {
             @PathVariable String listName) {
         Account user = accountService.deleteLista(login, listName);
         return ResponseEntity.ok(user);
+    }
+
+    @DeleteMapping("/{login}/{senha}")
+    public ResponseEntity<String> deleteAccount(@PathVariable String login, @PathVariable String senha) {
+        if (accountService.deleteAccount(login, senha) == 0) {
+            return new ResponseEntity<>("Usuário apagado com sucesso", HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>("Senha incorreta ou usuário não existe", HttpStatus.BAD_REQUEST);
+        }
     }
 }
