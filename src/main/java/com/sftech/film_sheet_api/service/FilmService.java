@@ -26,7 +26,8 @@ public class FilmService {
 
     /**
      * GET REQUEST:
-     * Retorna lista com detalhes dos filmes que possuem as palavras-chave inseridas
+     * Retorna lista com detalhes dos filmes que possuem as palavras-chave
+     * informadas
      * 
      * @param input Palavras-chave separadas por vírgula (,)
      * @return A lista de resultados da busca

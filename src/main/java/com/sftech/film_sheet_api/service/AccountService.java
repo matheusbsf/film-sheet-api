@@ -50,8 +50,8 @@ public class AccountService {
 
     /**
      * GET REQUEST:
-     * Retorna uma lista com os detalhes dos filmes de uma lista de IDs de um
-     * usuario
+     * Retorna uma lista com os detalhes dos filmes de uma lista de IDs do usuário
+     * informado
      * 
      * @param login    O nome da conta que possui a lista desejada
      * @param listName O nome da lista desejada
@@ -68,7 +68,7 @@ public class AccountService {
 
     /**
      * PUT REQUEST:
-     * Cria uma nova lista de filmes para um usuário
+     * Cria uma nova lista de filmes para o usuário informado
      * 
      * @param login    O nome da conta que irá armazenar a lista
      * @param listName O nome desejado para a lista
@@ -87,7 +87,7 @@ public class AccountService {
 
     /**
      * PUT REQUEST:
-     * Insere ou remove o ID de um filme na lista escolhida de um usuário de acordo
+     * Insere ou remove o ID de um filme na lista informada de um usuário de acordo
      * com a ação escolhida
      * 
      * @param action   A ação desejada: "add" ou "del"
@@ -122,7 +122,7 @@ public class AccountService {
 
     /**
      * PUT REQUEST:
-     * Remove a lista escolhida da conta de um usuário
+     * Remove a lista informada da conta de um usuário
      * 
      * @param login    O nome da conta que possui a lista
      * @param listName O nome da lista para exclusão
@@ -153,7 +153,6 @@ public class AccountService {
         } else {
             return 1;
         }
-
     }
 
     /**
