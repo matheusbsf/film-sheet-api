@@ -1,13 +1,16 @@
-package com.sftech.film_sheet_api.account;
+package com.sftech.film_sheet_api.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.sftech.film_sheet_api.film.Film;
+import com.sftech.film_sheet_api.entity.Account;
+import com.sftech.film_sheet_api.entity.Film;
+import com.sftech.film_sheet_api.service.AccountService;
 
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,6 +24,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 @RequestMapping(path = "api/v1/account")
 public class AccountController {
 
+    @Autowired
     private final AccountService accountService;
 
     public AccountController(AccountService accountService) {

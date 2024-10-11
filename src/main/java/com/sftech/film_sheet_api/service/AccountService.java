@@ -1,19 +1,23 @@
-package com.sftech.film_sheet_api.account;
+package com.sftech.film_sheet_api.service;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.sftech.film_sheet_api.film.Film;
-import com.sftech.film_sheet_api.film.FilmService;
+import com.sftech.film_sheet_api.entity.Account;
+import com.sftech.film_sheet_api.entity.Film;
+import com.sftech.film_sheet_api.repository.AccountRepository;
 
 @Service
 public class AccountService {
 
+    @Autowired
     private final AccountRepository accountRepository;
+    @Autowired
     private final FilmService filmService;
 
     public AccountService(AccountRepository accountRepository, FilmService filmService) {

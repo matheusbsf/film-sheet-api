@@ -1,4 +1,4 @@
-package com.sftech.film_sheet_api.film;
+package com.sftech.film_sheet_api.service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,6 +6,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
+
+import com.sftech.film_sheet_api.entity.Film;
+import com.sftech.film_sheet_api.response.FilmResponse;
 
 @Service
 public class FilmService {

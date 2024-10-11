@@ -1,6 +1,8 @@
-package com.sftech.film_sheet_api.film;
+package com.sftech.film_sheet_api.response;
 
 import java.util.List;
+
+import com.sftech.film_sheet_api.entity.Film;
 
 import lombok.Getter;
 import lombok.Setter;

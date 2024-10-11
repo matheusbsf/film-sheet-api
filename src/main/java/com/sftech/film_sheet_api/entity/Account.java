@@ -1,4 +1,4 @@
-package com.sftech.film_sheet_api.account;
+package com.sftech.film_sheet_api.entity;
 
 import java.util.HashMap;
 import java.util.Map;
