@@ -8,8 +8,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.sftech.film_sheet_api.entity.Account;
-import com.sftech.film_sheet_api.entity.Film;
+import com.sftech.film_sheet_api.model.Account;
+import com.sftech.film_sheet_api.model.Film;
 import com.sftech.film_sheet_api.repository.AccountRepository;
 
 @Service

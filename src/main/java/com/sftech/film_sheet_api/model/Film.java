@@ -1,4 +1,4 @@
-package com.sftech.film_sheet_api.entity;
+package com.sftech.film_sheet_api.model;
 
 import lombok.Getter;
 import lombok.Setter;

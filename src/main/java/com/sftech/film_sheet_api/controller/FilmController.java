@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.sftech.film_sheet_api.entity.Film;
+import com.sftech.film_sheet_api.model.Film;
 import com.sftech.film_sheet_api.response.FilmResponse;
 import com.sftech.film_sheet_api.service.FilmService;
 

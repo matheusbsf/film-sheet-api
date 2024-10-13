@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 
-import com.sftech.film_sheet_api.entity.Film;
+import com.sftech.film_sheet_api.model.Film;
 import com.sftech.film_sheet_api.response.FilmResponse;
 
 @Service

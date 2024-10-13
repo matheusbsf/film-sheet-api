@@ -16,8 +16,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.sftech.film_sheet_api.entity.Account;
-import com.sftech.film_sheet_api.entity.Film;
+import com.sftech.film_sheet_api.model.Account;
+import com.sftech.film_sheet_api.model.Film;
 import com.sftech.film_sheet_api.service.AccountService;
 
 import io.swagger.v3.oas.annotations.Operation;
