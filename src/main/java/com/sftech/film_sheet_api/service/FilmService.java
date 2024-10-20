@@ -14,7 +14,7 @@ import com.sftech.film_sheet_api.response.FilmResponse;
 public class FilmService {
 
     // API Bearer Token
-    @Value("${access.token}")
+    @Value("${API_TOKEN}")
     private String accessToken;
     private final WebClient webClient;
     // Idioma das informações recolhidas da API da TMDB
